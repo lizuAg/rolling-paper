@@ -12,7 +12,7 @@ fi
 cd $REPOSITORY
 
 APP_NAME=cicdproject
-JAR_NAME=$(ls $REPOSITORY/build/libs/ | grep 'SNAPSHOT.jar' | tail -n 1)
+JAR_NAME=$(ls $REPOSITORY/build/libs/ | grep '.jar' | tail -n 1)
 JAR_PATH=$REPOSITORY/build/libs/$JAR_NAME
 CURRENT_PID=$(pgrep -f $APP_NAME)
 
